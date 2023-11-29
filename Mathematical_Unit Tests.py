@@ -8,26 +8,23 @@
 #Code to write the tests for:
 
 #---------------------------------
-import unittest
 import Mathematical
 
-class TestMathMethods(unittest.TestCase):
+class TestMathMethods():
 
     def test_addition(self):
         plussa = Mathematical.add(5, 4)
         miinus = Mathematical.add(-6, 3)
-        self.assertEqual(plussa, 9)
-        self.assertEqual(miinus, -3)
+        assert plussa == 9
+        assert miinus == -3
 
     def test_multiply(self):
         multi = Mathematical.multiply(3, 4)
         nolla = Mathematical.multiply(0, 9)
-        self.assertEqual(multi, 12)
-        self.assertEqual(nolla, 0)
+        assert multi == 12
+        assert nolla == 0        
 
     def test_split(self):
         exponentti = Mathematical.power(2, 8)
-        self.assertEqual(exponentti, 256)
-
-if __name__ == '__main__':
-    unittest.main()
+        assert exponentti == 256
+        
